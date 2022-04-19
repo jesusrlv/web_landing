@@ -81,14 +81,17 @@
   </head>
 
   <header class="m-0">
-    <nav class="navscroll navbar navbar-expand-md fixed-top">
-      <div class="container-fluid">
+    <nav class="navscroll navbar navbar-expand-md fixed-top mx-auto">
+      <div class="container-fluid mx-auto">
         <a class="navbar-brand" href="#"><i class="bi bi-phone"></i> Empresa</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <!-- <span class="navbar-toggler-icon" style="color: #b76d6d;"></span> -->
+          <span class="line"></span> 
+          <span class="line"></span> 
+          <span class="line" style="margin-bottom: 0;"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0 ">
+        <div class="collapse navbar-collapse p-2" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 mx-auto">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
             </li>
@@ -104,8 +107,11 @@
             <li class="nav-item">
               <a class="nav-link" href="envio.php">Blog</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary btn-sm" href="envio.php">Contrata ahora</a>
+            </li>
           </ul>
-            <button class="btn btn-warning" type="submit">Contrata ahora</button>
+            <!-- <button class="btn btn-warning" type="submit">Contrata ahora</button> -->
         </div>
       </div>
     </nav>
@@ -143,39 +149,42 @@
     <p class="h3 text-center">Tu plan de retiro</p>
     <p class="text-success h5 text-center"><strong>En 25 años tendrás</strong></p>
     <!-- Three columns of text below the carousel -->
-    <div class="row mt-5">
+    <div class="row mt-5 g-3">
 
       <div class="col-lg-4">
-        <div class="card text-end text-light bg-dark" style="width: 100%;">
+        <div class="card text-center text-dark" style="width: 100%;">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Special title treatment</h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary">Ejemplo de proyección</a>
             </div>
           </div>
         </div>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <div class="card text-center text-light bg-dark" style="width: 100%;">
-          <img src="assets/brand/img/cel6.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Ofertas especiales</h5>
-            <p class="card-text">Catálogo de ofertas de la empresa.</p>
-            <a href="#" class="btn btn-primary">Acceder a la sección</a>
+        <div class="card text-center text-dark" style="width: 100%;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Ejemplo de proyección</a>
+            </div>
           </div>
         </div>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <div class="card text-start text-light bg-dark" style="width: 100%;">
-          <img src="assets/brand/img/cel5.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Novedades</h5>
-            <p class="card-text">Catálogo de novedades de la empresa.</p>
-            <a href="#" class="btn btn-primary">Acceder a la sección</a>
+        <div class="card text-center text-dark" style="width: 100%;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Ejemplo de proyección</a>
+            </div>
           </div>
         </div>
       </div><!-- /.col-lg-4 -->
+      
       
     </div><!-- /.row -->
 
@@ -249,15 +258,33 @@
       $(function(){
       $(window).scroll(function(){
          if ($(this).scrollTop() > 100) {
+          $('.nav-link').addClass("azul");
           $('.navscroll').addClass("azul");
+          $('.navbar-brand').addClass("azul");
          } else {
+          $(".nav-link").removeClass("azul");
           $(".navscroll").removeClass("azul");
+          $(".navbar-brand").removeClass("azul");
          }
       });
   });
     </script>
 
       <style>
+
+        .navbar-brand.azul{
+          color: #000000;
+        }
+        .navbar-brand{
+          color: #ffffff;
+        }
+
+        .nav-link{
+          color: #ffffff;
+        }
+        .nav-link.azul{
+          color: #000000;
+        }
         .navscroll {
           background-color:rgba(0, 0, 0, 0.0);
           color:yellow;
@@ -266,8 +293,24 @@
       }
 
       .navscroll.azul {
-          background-color:blue;
+          background-color:rgb(255, 255, 255);
           color:white;
+          box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+      }
+
+      .navbar-toggler{
+          width: 47px;
+          height: 34px;
+          background-color:rgba(255, 255, 255, 0.3);
+          border:none;
+      }
+
+      .navbar-toggler .line{
+          width: 100%;
+          float: left;
+          height: 2px;
+          background-color: #fff;
+          margin-bottom: 5px;
       }
       </style>
   </body>
