@@ -32,110 +32,127 @@
       }
     </style>
 
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/brand/img/portada.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    /* background-color: #ddd; */
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .hero-text button:hover {
+    background-color: #555;
+    color: white;
+  }
+  </style>
+
     
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
   </head>
-  <body>
-    
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><i class="bi bi-phone"></i> Tienda en línea</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-fill"></i> Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalogo.php?id=1"><i class="bi bi-shield-fill-check"></i> Carcazas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="envio.php"><i class="bi bi-geo-fill"></i> Rastreo de envíos</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
+
+  <header class="m-0">
+    <nav class="navscroll navbar navbar-expand-md fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="bi bi-phone"></i> Empresa</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalogo.php?id=1">Tu plan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="envio.php">Ventajas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="envio.php">Testimonios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="envio.php">Blog</a>
+            </li>
+          </ul>
+            <button class="btn btn-warning" type="submit">Contrata ahora</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+
+  <!-- body hero -->
+  <body class="m-0">
+
+    <div class="hero-image m-0">
+      <div class="hero-text">
+        <h2 style="font-size:36px;">Retírate con más de 3<br>millones.</h2>
+        <p>¿Quieres invertir en fondos Indexados?</p>
+        <p>Te enseñamos a invertir en la bolsa de valores para obtener hasta el 12% de<br>rendimiento anual comprando Etf's del S&P500.</p>
+        <a href="#" class="me-1" style="text-decoration:none; color: blanchedalmond;"> Agenda una asesoría</a> <button type="button" class="btn btn-warning">Contrata ahora</button>
       </div>
     </div>
-  </nav>
-</header>
+    
+    <!-- <p>Page Content..</p> -->
+    
+    <!-- </body> -->
+
+  <!-- body hero -->
+  <!-- <body> -->
+    
 
 <main>
-
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="bd-placeholder-img" style="width: 100%; height: 100%; object-fit: cover; object-position:center; background-repeat: no-repeat;" src="assets/brand/img/cel3.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>
-
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Texto principal.</h1>
-            <p>Representa el texto que llevará la imagen</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Enlace</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="bd-placeholder-img" style="width: 100%; height: 100%; object-fit: cover; object-position:center; background-repeat: no-repeat;" src="assets/brand/img/cel1.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>
-
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Texto principal.</h1>
-            <p>Representa el texto que llevará la imagen</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Enlace</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="bd-placeholder-img" style="width: 100%; height: 100%; object-fit: cover; object-position:center; background-repeat: no-repeat;" src="assets/brand/img/cel2.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>
-
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>Texto principal.</h1>
-            <p><span style="background-color: rgba(0, 0, 0, 0.2); border-radius: 3px;" class="p-2">Representa el texto que llevará la imagen</span></p>
-            <p><a class="btn btn-lg btn-primary" href="#">Enlace</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
 
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="container marketing">
-
+  <div class="container mt-5">
+    <p class="text-success h5 text-center">EMPIEZA HOY</p>
+    <p class="h3 text-center">Tu plan de retiro</p>
+    <p class="text-success h5 text-center"><strong>En 25 años tendrás</strong></p>
     <!-- Three columns of text below the carousel -->
-    <div class="row">
+    <div class="row mt-5">
 
       <div class="col-lg-4">
         <div class="card text-end text-light bg-dark" style="width: 100%;">
-          <img src="assets/brand/img/cel4.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Catálogo de productos</h5>
-            <p class="card-text">Contenido de la empresa.</p>
-            <a href="catalogo.php?id=1" class="btn btn-primary">Acceder a la sección</a>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
           </div>
         </div>
       </div><!-- /.col-lg-4 -->
@@ -223,7 +240,35 @@
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous"></script>
 
-      
+    <script>
+      $(function(){
+      $(window).scroll(function(){
+         if ($(this).scrollTop() > 100) {
+          $('.navscroll').addClass("azul");
+         } else {
+          $(".navscroll").removeClass("azul");
+         }
+      });
+  });
+    </script>
+
+      <style>
+        .navscroll {
+          background-color:rgba(0, 0, 0, 0.0);
+          color:yellow;
+          transition:background-color 500ms, color 500ms;
+          text-decoration: none;
+      }
+
+      .navscroll.azul {
+          background-color:blue;
+          color:white;
+      }
+      </style>
   </body>
 </html>
